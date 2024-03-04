@@ -1,0 +1,11 @@
+# STATION: TT468
+# STATION NAME: CALFIRE PORTABLE 44
+# LATITUDE: 37.464300
+# LONGITUDE: -119.947400
+# ELEVATION [ft]: 3456.0
+# STATE: CA
+Station_ID,Date_Time,air_temp_set_1,relative_humidity_set_1,wind_speed_set_1,wind_direction_set_1,wind_gust_set_1,solar_radiation_set_1,precip_accum_set_1,peak_wind_speed_set_1,fuel_temp_set_1,fuel_moisture_set_1,volt_set_1,peak_wind_direction_set_1,wind_chill_set_1d,wind_cardinal_direction_set_1d,heat_index_set_1d,dew_point_temperature_set_1d
+,,Fahrenheit,%,Miles/hour,Degrees,Miles/hour,W/m**2,Inches,Miles/hour,Fahrenheit,gm,volts,Degrees,Fahrenheit,code,Fahrenheit,Fahrenheit
+TT468,03/10/2022 11:14 PST,67.0,18.0,,,,797.0,0.0,,79.0,5.9,13.2,,,,,22.03
+TT468,03/10/2022 12:14 PST,68.0,21.0,1.0,300.0,4.0,865.0,0.0,4.0,78.0,6.0,13.2,303.0,,WNW,,26.53
+TT468,03/10/2022 13:14 PST,70.0,16.0,1.0,199.0,5.0,857.0,0.0,5.0,81.0,5.6,13.3,182.0,,SSW,,21.72
