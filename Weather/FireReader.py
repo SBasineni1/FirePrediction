@@ -19,7 +19,7 @@ import seaborn as sb
 #import os
 
 #Create a variable for the file name
-filename = "YNWC1-2021-2023-inputfile.csv"
+filename = "YNWC1-2021-2023-inputfilev1.0.csv"
 filenamew = "Fire_data.txt"
 #initialize an empty list
 word_list= []
@@ -35,20 +35,25 @@ outfile.writelines(word_list)
 outfile.close()
 infile.close() #close the file when you're done!
 
+#cols = ['Station_ID','Date_Time	air_temp_set_1','relative_humidity_set_1','wind_speed_set_1','wind_direction_set_1',
+#        'wind_gust_set_1','snow_depth_set_1','solar_radiation_set_1','precip_accum_set_1','peak_wind_speed_set_1',
+#        'fuel_temp_set_1','fuel_moisture_set_1','volt_set_1','snow_interval_set_1','peak_wind_direction_set_1','wind_chill_set_1d',
+#        'wind_cardinal_direction_set_1d','heat_index_set_1d','dew_point_temperature_set_1d']
+
 # Read the fixed format file into a Pandas Data Frame
 
-cols = [']
-df = pd.read_fwf('/Users/basin/.vscode/Weather/Fire_data', 
-                 header=None,widths=[12,5,3,3,3,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],
-                 names=cols)
+df = pd.read_fwf('YNWC1-2021-2023-inputfilev1.0.csv', sep=',',
+                 header=1,names = None,widths=None,skip_baln_lines=True)
+                 #[12,5,3,3,3,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],
+                 #names=cols)
 df.shape
 print(df)
 df.describe(include='all')
 
-'''df_2007 = df[df.Year >= 2007 ]
+#df_2007 = df[df.Year >= 2007 ]
 
-df_2007 = df_2007[(df_2007.PW != -99999)]
-df_2007 = df_2007[(df_2007.CAPE != -99999)]  
+#df_2007 = df_2007[(df_2007.PW != -99999)]
+#df_2007 = df_2007[(df_2007.CAPE != -99999)]  
 # No of Rows and columns                
 df.shape
 
@@ -56,7 +61,7 @@ df.shape
 df.dtypes
 
 #Used to import the actual tornado reports
-df_tor = pd.read_csv('1950-2021_actual_tornadoes.csv')
+'''df_tor = pd.read_csv('1950-2021_actual_tornadoes.csv')
 df_tor.describe(include='all').transpose()
 df_tor_f = df_tor[['om','yr','mo','dy','st','mag']]
 #removing duplicate tornado records
