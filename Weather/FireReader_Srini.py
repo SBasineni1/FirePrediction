@@ -85,7 +85,7 @@ def importdata():
 
 # Function to split the dataset into features and target variables
 def splitdataset(balance_data):
- 
+
     # Separating the target variable
     X = balance_data.values[:, 1:5]
     Y = balance_data.values[:, 0]
